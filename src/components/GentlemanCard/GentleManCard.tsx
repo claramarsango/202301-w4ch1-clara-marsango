@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Gentleman from "../Gentleman.models";
-import "./GentleManCard.css";
 
 interface GentlemanCardProps {
   gentleman: Gentleman;
@@ -12,7 +11,7 @@ const GentlemanCard: FC<GentlemanCardProps> = ({ gentleman }) => {
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
-          src={gentleman.picture}
+          src={`img/${gentleman.picture}`}
           alt={gentleman.alternativeText}
         />
         <span className="gentleman__initial">{gentleman.name[0]}</span>
